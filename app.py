@@ -11,7 +11,7 @@ from sql_query import run_sql_query
 from rerank import reranked_documents
 from get_values import get_value_description
 
-sys.path.append("/home/hughkhan/github/langchain_playground")
+#sys.path.append("/home/hughkhan/github/langchain_playground")
 from config import set_environment
 set_environment()
 
@@ -26,7 +26,7 @@ def main():
     print("Option 5: Get Definitions")
     print("Option 6: Exit")
 
-    choice = input("Enter your choice (1-5): ")
+    choice = input("Enter your choice (1-6): ")
 
     if choice == '1':
         get_naics_vectordb()

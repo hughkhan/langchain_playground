@@ -1,11 +1,11 @@
 from langchain_openai import ChatOpenAI
-
+import os
 
 def get_naics_llm_direct():
 
     llm = ChatOpenAI(                       #Langchain OpenAI Model Wrapper but going through AIML.com
-        openai_api_base="https://api.aimlapi.com/v1/",
-        openai_api_key="4c217676012e44e8958e8984aa839903",
+        openai_api_base=os.environ["VENDOR_URL"],
+        openai_api_key=os.environ["AIMLAPI_KEY"],
         #model_name="Qwen/Qwen1.5-72B-Chat")
         #model_name="meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo")
         #model_name="meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo")
